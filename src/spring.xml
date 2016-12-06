@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="pet" class="com.praj.exmple.Pet">
+	<property name="pName" value="pet"></property>
+	<property name="breed" value="german"></property>
+	
+	</bean>
+	<bean id="dog" class="com.praj.exmple.Dog" >
+	<property name="dName" value="dog"></property>
+	</bean>
+	<bean id="petOwner" class="com.praj.exmple.PetOwner">
+		<property name="pet" ref="pet" />
+		<property name="dog" ref="dog" />
+		
+		
+		
+	</bean>
+
+</beans>
